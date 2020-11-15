@@ -1,0 +1,1 @@
+osmfilter macedonia-latest.osm --keep="amenity=fuel" | osmconvert64 - --all-to-nodes --csv="@id @lon @lat name fuel:diesel operator brand tenant opening_hours payment:cash payment:mastercard payment:visa payment:diners_club payment:maestro fuel:octane_95 fuel:octane_98 fuel:lpg building=yes building:roof covered=yes" --csv-headline --csv-separator="," -o="Benziski Pumpi.csv"
