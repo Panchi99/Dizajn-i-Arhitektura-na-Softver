@@ -24,7 +24,8 @@ namespace Dizajn_i_Arhitektura_na_Softver
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/gasPrices.css"));
         }
     }
 }

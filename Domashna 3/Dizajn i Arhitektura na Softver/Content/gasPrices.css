@@ -1,14 +1,44 @@
 ﻿.gasPrices {
-    width: 300px;
-    height: 500px;
+    margin-top:30px;
+    width: 120%;
+    height:auto;
     background-color:lightgreen;
-    position: absolute;
     text-align: center;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .gasPrices h1 {
-        width:300px;
+        width:80%;
         margin: auto;
-        line-height: 51px;
-        vertical-align: middle;
+        font-size:30px;
     }
+.gasPricesContainer{
+    width:120%;
+    margin-top:70px;
+    margin-left:auto;
+    margin-right:auto;
+    height:500px;
+    
+}
+
+body > div.container.body-content > div.gasPricesContainer > div.FAQ {
+    float: left;
+    width: 30%;
+    margin-right: 30px;
+}
+body > div.container.body-content > div.gasPricesContainer > div.prices {
+    float: right;
+    width: 65%;
+}
+body > div.container.body-content > div.gasPricesContainer > div.FAQ > .gasParagraph{
+    width:100%;
+}
+body > div.container.body-content > div.gasPricesContainer > div.FAQ > .gasParagraph > h1 {
+    background-color: lightgreen;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+body > div.container.body-content > div.gasPricesContainer > div.FAQ > .gasParagraph > img{
+    width:100%;
+}
