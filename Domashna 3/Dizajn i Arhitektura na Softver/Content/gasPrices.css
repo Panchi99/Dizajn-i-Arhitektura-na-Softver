@@ -1,0 +1,14 @@
+﻿.gasPrices {
+    width: 300px;
+    height: 500px;
+    background-color:lightgreen;
+    position: absolute;
+    text-align: center;
+}
+
+.gasPrices h1 {
+        width:300px;
+        margin: auto;
+        line-height: 51px;
+        vertical-align: middle;
+    }
