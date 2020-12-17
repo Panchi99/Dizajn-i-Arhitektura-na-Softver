@@ -23,7 +23,7 @@
 }
 body > div.container.body-content > div.gasPricesContainer > div.prices {
     width:100%;
-    heigt:100%;
+    height:100%;
     margin-left:auto;
     margin-right:auto;
 }
@@ -34,7 +34,7 @@ body > div.container.body-content > div.gasPricesContainer > div.FAQ {
 }
 body > div.container.body-content > div.gasPricesContainer > div.prices {
     float: right;
-    width: 65%;
+    width: 60%;
 }
 body > div.container.body-content > div.gasPricesContainer > div.FAQ > .gasParagraph{
     width:100%;
@@ -59,11 +59,11 @@ body > div.container.body-content > div.gasPricesContainer > div.FAQ > .gasParag
 }
 body > div.container.body-content > div.gasPricesContainer > div.prices{
     height:auto;
-    width:65%;
+    width:60%;
 }
 body > div.container.body-content > div.gasPricesContainer > div.prices > div.fuelPrices > div {
     width: 20%;
-    margin-right: 30px;
+    margin-right: 20px;
     float: left;
 }
     body > div.container.body-content > div.gasPricesContainer > div.prices > div.fuelPrices > div > h1 {
@@ -91,8 +91,7 @@ body > div.container.body-content > div.gasPricesContainer > div.prices > div:nt
     margin-bottom: 30px;
     width:100%;
 }
-body > div.container.body-content > div.gasPricesContainer > div.prices > img {
-margin-left:120px;
-margin-top: 40px;
-width:100%;
+body > div.container.body-content > div.gasPricesContainer > div.prices > div:nth-child(5) > img {
+    margin-left: 100px;
+    width: 100%;
 }

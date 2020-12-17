@@ -26,7 +26,8 @@ namespace Dizajn_i_Arhitektura_na_Softver
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/gasPrices.css",
-                      "~/Content/ContactCSS.css"));
+                      "~/Content/ContactCSS.css",
+                      "~/Content/AboutUsCSS.css"));
                 }
     }
 }

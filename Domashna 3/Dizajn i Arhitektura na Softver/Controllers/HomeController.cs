@@ -102,7 +102,7 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
-            return View();
+            return View(new SendMail());
         }
         public ActionResult Map() {
             ViewBag.Mesage = "Your map page.";
