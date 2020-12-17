@@ -1,2 +1,40 @@
-﻿body {
+﻿.fill img {
+ 
+    margin:0;
+    height: auto;
+    max-height: 100%;
+    width: 100%;
+
+}
+    #divBox {
+  
+    text-align: center;
+}
+#bodyForm {
+    display:inline;
+    
+ width:800px;
+}
+.form-group input {
+    display: inline-block;
+    max-width: inherit;
+}
+.form-group textarea {
+    display: inline-block;
+    max-width:inherit;
+    height:150px;
+}
+
+.form-group #button {
+    width: 100%;
+    background-image: url(https://www.flaticon.com/svg/static/icons/svg/2590/2590818.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 90%;
+    color: transparent; /* Hide button text */
+    padding: 20px 70px;
+}
+#text-naslov {
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
