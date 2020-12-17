@@ -18,10 +18,15 @@
     margin-top:70px;
     margin-left:auto;
     margin-right:auto;
-    height:500px;
+    height:1000px;
     
 }
-
+body > div.container.body-content > div.gasPricesContainer > div.prices {
+    width:100%;
+    heigt:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
 body > div.container.body-content > div.gasPricesContainer > div.FAQ {
     float: left;
     width: 30%;
@@ -41,4 +46,53 @@ body > div.container.body-content > div.gasPricesContainer > div.FAQ > .gasParag
 }
 body > div.container.body-content > div.gasPricesContainer > div.FAQ > .gasParagraph > img{
     width:100%;
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    font-size: 15px;
+    color:white;
+    text-align: center;
+    background: forestgreen
+}
+body > div.container.body-content > div.gasPricesContainer > div.prices{
+    height:auto;
+    width:65%;
+}
+body > div.container.body-content > div.gasPricesContainer > div.prices > div.fuelPrices > div {
+    width: 20%;
+    margin-right: 30px;
+    float: left;
+}
+    body > div.container.body-content > div.gasPricesContainer > div.prices > div.fuelPrices > div > h1 {
+        font-size: 22px;
+    }
+.fillUp {
+    margin-top: 30px;
+    width: 100%;
+    height: 150px;
+    background-color: lightgreen;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+body > div.container.body-content > div.gasPricesContainer > div.prices > div.fuelPrices {
+    width: 100%;
+    height: 150px;
+}
+body > div.container.body-content > div.gasPricesContainer > div.prices > div.fillUp > input[type=button] {
+    margin-top:65px;
+}
+body > div.container.body-content > div.gasPricesContainer > div.prices > div:nth-child(4) > h1 {
+    background-color: lightgreen;
+    font-size: 22px;
+    margin-bottom: 30px;
+    width:100%;
+}
+body > div.container.body-content > div.gasPricesContainer > div.prices > img {
+margin-left:120px;
+margin-top: 40px;
+width:100%;
 }
