@@ -96,9 +96,7 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
 
 
 
-
-
-        public ActionResult Contact()
+    public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
 
