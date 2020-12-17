@@ -1,0 +1,61 @@
+﻿.banner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+#slika {
+    z-index: -1;
+    width: 100%;
+    height: 200px;
+}
+
+.title{
+    position:center;
+    width:500px;
+    border: 3px solid red;
+}
+.title {
+    background-color: #e8e7e6;
+}
+.title{
+    
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+.title h1{
+    margin-top: -15px;
+}
+.grid-containter {
+    padding-left: 36px;
+    margin-top: 157px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.grid-item {
+    width: 1052px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.col-md-2{
+    //border:1px solid red;
+}
+.redovi {
+    margin-top: 40px;
+    margin-left: -140px;
+}
+.teammates {
+    width: 195px;
+    height:150px;
+}
+#popup {
+    display:none;
+}

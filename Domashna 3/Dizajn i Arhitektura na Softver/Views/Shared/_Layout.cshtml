@@ -3,44 +3,70 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <title>@ViewBag.Title - Petrol Heads</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Petrol Heads", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="col-md-2">@Html.ActionLink("Home", "Index", "Home", new { @class = "navbar-brand"} )</li>
-                    <li class="col-md-2">@Html.ActionLink("Gas Prices", "GasPrices", "Home", new { @class = "navbar-brand" })</li>
-                    <li class="col-md-2">@Html.ActionLink("Map", "Map", "Home", new { @class = "navbar-brand" })</li>
-                    <li class="col-md-2">@Html.ActionLink("About Us", "AboutUs", "Home", new { @class = "navbar-brand"})</li>
-                    <li class="col-md-2">@Html.ActionLink("Contact", "Contact", "Home", new { @class = "navbar-brand"})</li>
 
-                </ul>
+    <style>
+
+        .navbar-default .navbar-brand {
+            color: white;
+        }
+        #RedMenu {
+            background-color: gray;
+            border-color: gray;
+        }
+
+            #RedMenu ul li a {
+                color: white;
+            }
+
+            #RedMenu ul li:hover {
+                background-color: darkgray;
+            }
+    </style>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top" id="RedMenu">
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MainNavBar"
+                            style="background-color:#000">
+                        <span class="icon-bar" style="background-color:#ffffff"></span>
+                        <span class="icon-bar" style="background-color:#ffffff"></span>
+                        <span class="icon-bar" style="background-color:#ffffff"></span>
+                    </button>
+                    <a>@Html.ActionLink("Petrol Heads", "Index", "Home", new { @class = "navbar-brand" })</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="MainNavBar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Home", "Index", "Home", new { @class = "navbar-brand" })</li>
+                        <li>@Html.ActionLink("Gas Prices", "GasPrices", "Home", new { @class = "navbar-brand" })</li>
+                        <li>@Html.ActionLink("Map", "Map", "Home", new { @class = "navbar-brand" })</li>
+                        <li>@Html.ActionLink("About Us", "AboutUs", "Home", new { @class = "navbar-brand" })</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home", new { @class = "navbar-brand" })</li>
+                    </ul>
+                </div>
+
             </div>
+        </nav>
+
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <div class="container body-content">
+            @RenderBody()
+
+
         </div>
-    </div>
-    
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
-</body>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
 </html>
