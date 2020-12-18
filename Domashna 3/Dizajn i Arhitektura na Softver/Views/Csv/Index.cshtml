@@ -91,5 +91,89 @@
     <p id="row1">Во Република Северна Македонија има над 250 бензиски пумпи, од кои најголемиот дел се наоѓаат во главниот град Скопје. Најпознати брендови се: Лукоил, Макпетрол, Окта и многу други.</p>
 </div>
 
+<table id="table" class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                ID
+            </th>
+            <th>
+                Opening Hours
+            </th>
+            <th>
+                Cash Payment
+            </th>
+            <th>
+                Master Card Payment
+            </th>
+            <th>
+                Visa Payment
+            </th>
+            <th>
+                Fuel Diesel
+            </th>
+            <th>
+                Fuel 95
+            </th>
+            <th>
+                Fuel 98
+            </th>
+            <th>
+                Fuel LPG
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(int i=1;i<Model.getName().Count;i++)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getName()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getID()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getOpeningHours()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getCashPayment()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getMasterCardPayment()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getVisaPayment()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getFuelDiesel()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getFuel95()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getFuel98()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getFuelLPG()[i])
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts{
+
+    <script>
+        
+        $("#table").DataTable();
+
+    </script>
+
+}
 
 
