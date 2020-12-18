@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Dizajn_i_Arhitektura_na_Softver.Models.Csv>
+﻿@model Dizajn_i_Arhitektura_na_Softver.Models.Csv
 
 
 <!DOCTYPE html>
@@ -67,12 +67,16 @@
         var infoWindow = new google.maps.InfoWindow();
         var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
         //give latitude and long
-        var myLatlng = new google.maps.LatLng("41.6086", "21.7453");
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            title: "Macedonia"
-        });
+        var lat =@Html.Raw(Json.Encode(Model.getLatitude()));
+        var long = @Html.Raw(Json.Encode(Model.getLongitude()));
+        for (let i = 1, j=1; i < lat.length; i++, j++) {
+                var myLatlng = new google.maps.LatLng(lat[i], long[j]);
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: "Macedonia"
+                });
+            }
     }
 </script>
 
