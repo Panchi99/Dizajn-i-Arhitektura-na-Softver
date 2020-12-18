@@ -5,27 +5,32 @@
 
 
 <style>
-    #map {
+    #dvMap {
         height: 500px;
         width: 1000px;
-        display: block;
         margin-left: auto;
         margin-right: auto;
     }
 
     #row1 {
         font-size: 20px;
+        width: 75%;
+    }
+
+    #mapaNaRM {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    #tekstISlika {
+        margin-top: 5%;
     }
 
     #img {
         display: block;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    #tekstZaMapa {
-        text-align: center;
-        font-size: 10px;
+        float: left;
     }
 
     html, body {
@@ -42,34 +47,40 @@
 </style>
 
 <div class="row">
-     <h1>
+    <h1>
         Мапа
-     </h1>
+    </h1>
 </div>
 
-<div class="row">
-    <div id="map"></div>
-    <script>
-        var map;
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 41.6086, lng: 21.7453 },
-                zoom: 8
-            });
-        }
-    </script>
-    <script defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJau8R5ITL010UEDY76YAyhbGRUixpPz8&callback=initMap">
-    </script>
-    <p id="tekstZaMapa">Мапа со бензиски пумпи во Република Северна Македонија</p>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        var mapOptions = {
+            //give latitude and long
+            center: new google.maps.LatLng("41.6086", "21.7453"),
+            zoom: 8,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var infoWindow = new google.maps.InfoWindow();
+        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+        //give latitude and long
+        var myLatlng = new google.maps.LatLng("41.6086", "21.7453");
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: "Macedonia"
+        });
+    }
+</script>
+
+<div id="dvMap"></div>
+
+<div id="mapaNaRM">
+    <p>Мапа на бензиски пумпи</p>
 </div>
 
-<div class="image" id="img">
-    <center>
-        <img width="700" height="500" src="https://spektartermo.com.mk/wp-content/uploads/2019/01/Front-mp-gev3.jpg" />
-    </center>
+<div class="image" id="tekstISlika">
+    <img width="700" height="500"  id="img" src="https://spektartermo.com.mk/wp-content/uploads/2019/01/Front-mp-gev3.jpg" />
+    <p id="row1">Во Република Северна Македонија има над 250 бензиски пумпи, од кои најголемиот дел се наоѓаат во главниот град Скопје. Најпознати брендови се: Лукоил, Макпетрол, Окта и многу други.</p>
 </div>
 
-<div class="row" id="row1">
-    <p>Во Република Северна Македонија има над 250 бензиски пумпи, од кои најголемиот дел се наоѓаат во главниот град Скопје. Најпознати брендови се: Лукоил, Макпетрол, Окта и многу други.</p>
-</div>
