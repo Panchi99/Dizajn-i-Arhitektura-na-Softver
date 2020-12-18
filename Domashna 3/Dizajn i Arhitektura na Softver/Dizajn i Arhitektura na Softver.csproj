@@ -120,10 +120,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CsvController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Csv.cs" />
     <Compile Include="Models\Fuel.cs" />
     <Compile Include="Models\SendMail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -174,6 +176,7 @@
     <Content Include="Views\Home\GasPrices.cshtml" />
     <Content Include="Views\Home\Map.cshtml" />
     <Content Include="Views\Home\Sent.cshtml" />
+    <Content Include="Views\Csv\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
