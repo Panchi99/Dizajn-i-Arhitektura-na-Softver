@@ -20,14 +20,19 @@ namespace Dizajn_i_Arhitektura_na_Softver
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootbox.js",
+                      "~/Scripts/DataTables/jquery.datatables.js",
+                      "~/Scripts/DataTables/dataTables.bootstrap.js"
+                      ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/gasPrices.css",
                       "~/Content/ContactCSS.css",
-                      "~/Content/AboutUsCSS.css"));
+                      "~/Content/AboutUsCSS.css",
+                      "~/Content/DataTables/css/datatables.bootstrap.css"));
                 }
     }
 }

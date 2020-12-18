@@ -4,6 +4,7 @@ using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using Microsoft.Ajax.Utilities;
 
 namespace Dizajn_i_Arhitektura_na_Softver.Models
 {
@@ -12,15 +13,41 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
         private List<String> longitude  { get; set;}
         private List<String> latitude { get; set; }
 
-        private int i;
+        private List<String> ID { get; set; }
 
-        private int j;
+        private List<String> Name { get; set; }
+
+        private List<String> openingHours { get; set; }
+
+        private List<String> cashPayment { get; set; }
+
+        private List<String> masterCardPayment { get; set; }
+
+        private List<String> visaPayment { get; set; }
+
+        private List<String> fuel95 { get; set; }
+
+        private List<String> fuel98 { get; set; }
+
+        private List<String> fuelDiesel { get; set; }
+
+        private List<String> fuelLPG { get; set; }
+
+
 
         public Csv() { 
             longitude = new List<String>();
             latitude = new List<String>();
-            i = 0;
-            j = 0;
+            ID = new List<String>();
+            Name = new List<String>();
+            openingHours = new List<String>();
+            cashPayment = new List<String>();
+            masterCardPayment = new List<String>();
+            visaPayment = new List<String>();
+            fuel95 = new List<String>();
+            fuel98 = new List<String>();
+            fuelDiesel = new List<String>();
+            fuelLPG = new List<String>();
         }
         public void csvFile()
         {
@@ -33,6 +60,16 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
 
                     longitude.Add(values[1]);
                     latitude.Add(values[2]);
+                    ID.Add(values[0]);
+                    Name.Add(values[3]);
+                    fuelDiesel.Add(values[4]);
+                    openingHours.Add(values[8]);
+                    cashPayment.Add(values[9]);
+                    masterCardPayment.Add(values[10]);
+                    visaPayment.Add(values[11]);
+                    fuel95.Add(values[14]);
+                    fuel98.Add(values[15]);
+                    fuelLPG.Add(values[16]);
                 }
             }
         }
@@ -45,24 +82,55 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
             return latitude;
         }
 
-        public void setI()
+        public List<String> getName()
         {
-            i++;
+            return Name;
         }
 
-        public void setJ()
+        public List<String> getID()
         {
-            j++;
+            return ID;
         }
 
-        public int getI()
+        public List<String> getFuelDiesel()
         {
-            return i;
+            return fuelDiesel;
         }
 
-        public int getJ()
+        public List<String> getOpeningHours()
         {
-            return j;
+            return openingHours;
         }
+
+        public List<String> getCashPayment()
+        {
+            return cashPayment;
+        }
+
+        public List<String> getMasterCardPayment()
+        {
+            return masterCardPayment;
+        }
+
+        public List<String> getVisaPayment()
+        {
+            return visaPayment;
+        }
+
+        public List<String> getFuel95()
+        {
+            return fuel95;
+        }
+
+        public List<String> getFuel98()
+        {
+            return fuel98;
+        }
+
+        public List<String> getFuelLPG()
+        {
+            return fuelLPG;
+        }
+
     }
 }
