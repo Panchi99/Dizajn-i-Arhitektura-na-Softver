@@ -472,3 +472,6 @@ C:\Users\kolev\Documents\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arh
 C:\Users\kolev\Documents\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\obj\Debug\Dizajn i Arhitektura na Softver.csproj.CopyComplete
 C:\Users\kolev\Documents\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\obj\Debug\Dizajn i Arhitektura na Softver.dll
 C:\Users\kolev\Documents\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\obj\Debug\Dizajn i Arhitektura na Softver.pdb
+C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\bin\HtmlAgilityPack.dll
+C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\bin\HtmlAgilityPack.pdb
+C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\bin\HtmlAgilityPack.xml
