@@ -1,6 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "GasPrices";
+    var lista = ViewBag.Message;
 }
 
 
@@ -41,9 +42,9 @@
                 Fusce egestas congue urna, id facilisis neque efficitur et.
             </p>
             <img src="https://st3.depositphotos.com/6930442/36345/v/600/depositphotos_363451378-stock-video-silhouette-of-an-oil-pumping.jpg" />
-            
+
         </div>
-        
+
     </div>
     <div class="prices">
         <div class="fuelPrices">
@@ -95,6 +96,59 @@
             </p>
             <img src="https://www.fuelfreedom.org/wp-content/uploads/icons.jpg" />
         </div>
-        
+
     </div>
 </div>
+
+
+<div id="CeniLista" style="height:390px; color:#3B5C8C; font-family:Verdana; font-size:18px; font-weight:bold; overflow-y:scroll; width: 241px;">
+
+    <table width='100%' border='0' cellspacing='0' cellpadding='0' style=' font-family:Verdana; font-size:12px; font-weight:normal; color:#000; background-color:#FFF;  '>
+        <tr>
+
+
+            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '>  ЕУРОСУПЕР<br />БС - 95</td>
+            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[1].InnerText;</td>
+        </tr>
+
+        <tr>
+            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ЕУРОСУПЕР<br />БС - 98 </td>
+            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[3].InnerText;</td>
+        </tr>
+
+        <tr>
+            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ЕУРОДИЗЕЛ БС (Д-Е V)</td>
+            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[5].InnerText;</td>
+        </tr>
+
+        <tr>
+            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ЕКСТРА ЛЕСНО <br /> 1(ЕЛ-1)</td>
+            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[7].InnerText;</td>
+        </tr>
+
+        <tr>
+            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> МАЗУТ М-1 HC</td>
+            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[9].InnerText;</td>
+        </tr>
+        <tr>
+            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> Домаќинства ЕДНОТАРИФНО мерење</td>
+            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[11].InnerText;</td>
+        </tr>
+
+        <tr>
+            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> Домаќинства ДВОТАРИФНО мерење (висока тарифа)</td>
+            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[13].InnerText;</td>
+        </tr>
+
+        <tr>
+            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> Домаќинства ДВОТАРИФНО мерење (ниска тарифа)</td>
+            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[15].InnerText;</td>
+        </tr>
+
+        <tr>
+            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ВЕТЕРНИ ЕЛЕКТРОЦЕНТРАЛИ ≤ 50 MW</td>
+            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[17].InnerText;</td>
+        </tr>
+    </table>
+</div>
+

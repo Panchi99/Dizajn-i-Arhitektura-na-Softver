@@ -393,3 +393,6 @@ C:\Users\panci\OneDrive\Desktop\DIANS\Dizajn-i-Arhitektura-na-Softver\Domashna 3
 C:\Users\panci\OneDrive\Desktop\DIANS\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\obj\Debug\Dizajn i Arhitektura na Softver.csproj.CopyComplete
 C:\Users\panci\OneDrive\Desktop\DIANS\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\obj\Debug\Dizajn i Arhitektura na Softver.dll
 C:\Users\panci\OneDrive\Desktop\DIANS\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\obj\Debug\Dizajn i Arhitektura na Softver.pdb
+C:\Users\panci\OneDrive\Desktop\DIANS\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\bin\HtmlAgilityPack.dll
+C:\Users\panci\OneDrive\Desktop\DIANS\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\bin\HtmlAgilityPack.pdb
+C:\Users\panci\OneDrive\Desktop\DIANS\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\bin\HtmlAgilityPack.xml
