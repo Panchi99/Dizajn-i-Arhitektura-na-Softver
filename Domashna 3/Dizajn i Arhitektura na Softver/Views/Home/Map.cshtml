@@ -56,7 +56,8 @@
     </h1>
 </div>
 
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyCJau8R5ITL010UEDY76YAyhbGRUixpPz8&callback=initAutocomplete&libraries=places&v=weekly"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script type="text/javascript">
     window.onload = function () {
         var mapOptions = {
@@ -77,10 +78,19 @@
                     map: map,
                     title: "Macedonia"
                 });
-            }
+        }
+        const input = document.getElementById("pac-input");
+        const searchBox = new google.maps.places.SearchBox(input);
+        mapOptions.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        mapOptions.addListener("bounds_changed", () => {
+            searchBox.setBounds(map.getBounds());
+        });
     }
 </script>
-
+<input id="pac-input"
+       class="controls"
+       type="text"
+       placeholder="Search Box" />
 <div id="dvMap"></div>
 
 <div id="mapaNaRM">

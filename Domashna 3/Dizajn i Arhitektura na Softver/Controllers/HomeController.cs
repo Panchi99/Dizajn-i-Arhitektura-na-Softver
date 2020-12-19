@@ -11,6 +11,8 @@ using System.Web.Mvc;
 using Dizajn_i_Arhitektura_na_Softver.Models;
 using System.Net;
 using System.Net.Mail;
+using System.Net.Http;
+using HtmlAgilityPack;
 using System.Threading.Tasks;
 
 namespace Dizajn_i_Arhitektura_na_Softver.Controllers
@@ -111,12 +113,30 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
 
             return View(new SendMail());
         }
-        
-        public ActionResult GasPrices()
+
+       
+
+       public async System.Threading.Tasks.Task<ActionResult> GasPrices()
         {
-            ViewBag.Message = "gas prices.";
+
+            var url = "https://www.erc.org.mk/";
+
+            var httpClient = new HttpClient();
+            var html = await httpClient.GetStringAsync(url);
+
+            var htmlDocument = new HtmlDocument();
+            htmlDocument.LoadHtml(html);
+
+            var divCeni = htmlDocument.DocumentNode.Descendants("div")
+                .Where(node => node.GetAttributeValue("id", "")
+                .Equals("CeniLista")).ToList();
+
+            var lista = divCeni[0].Descendants("td")
+                .ToList();
+
+            Console.WriteLine(lista.ToString());
+            ViewBag.Message = lista;
             return View();
         }
-        
     }
 }
