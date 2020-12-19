@@ -17,7 +17,8 @@
 
     #row1 {
         font-size: 20px;
-        width: 75%;
+        width: 100%;
+        margin-left: 10px;
     }
 
     #mapaNaRM {
@@ -51,7 +52,7 @@
 
 <div class="row">
     <h1>
-        Мапа
+        Map
     </h1>
 </div>
 
@@ -88,8 +89,13 @@
 
 <div class="image" id="tekstISlika">
     <img width="700" height="500" id="img" src="https://spektartermo.com.mk/wp-content/uploads/2019/01/Front-mp-gev3.jpg" />
-    <p id="row1">Во Република Северна Македонија има над 250 бензиски пумпи, од кои најголемиот дел се наоѓаат во главниот град Скопје. Најпознати брендови се: Лукоил, Макпетрол, Окта и многу други.</p>
+    <p id="row1">The Republic of North Macedonia has over 250 gas stations. The most famous brands are: Makpetrol, Okta, Lukoil etc.</p>
 </div>
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
 
 <table id="table" class="table">
     <thead>
@@ -124,44 +130,43 @@
             <th>
                 Fuel LPG
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
-        @for(int i=1;i<Model.getName().Count;i++)
+        @for (int i = 1; i < Model.getName().Count; i++)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getName()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getID()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getOpeningHours()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getCashPayment()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getMasterCardPayment()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getVisaPayment()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getFuelDiesel()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getFuel95()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getFuel98()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getFuelLPG()[i])
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getName()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getID()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getOpeningHours()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getCashPayment()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getMasterCardPayment()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getVisaPayment()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getFuelDiesel()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getFuel95()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getFuel98()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getFuelLPG()[i])
+                </td>
+            </tr>
         }
     </tbody>
 </table>
@@ -169,7 +174,7 @@
 @section Scripts{
 
     <script>
-        
+
         $("#table").DataTable();
 
     </script>

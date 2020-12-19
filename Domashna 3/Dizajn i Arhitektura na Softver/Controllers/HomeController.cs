@@ -23,7 +23,7 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
             return View();
         }
 
-        public ActionResult mapata()
+        public ActionResult Map()
         {
             Csv csv = new Csv();
             csv.csvFile();
