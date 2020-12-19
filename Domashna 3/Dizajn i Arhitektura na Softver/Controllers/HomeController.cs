@@ -23,6 +23,13 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
             return View();
         }
 
+        public ActionResult mapata()
+        {
+            Csv csv = new Csv();
+            csv.csvFile();
+            return View(csv);
+        }
+
         public ActionResult AboutUs()
         {
             ViewBag.Message = "Your application description page.";
@@ -104,10 +111,7 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
 
             return View(new SendMail());
         }
-        public ActionResult Map() {
-            ViewBag.Mesage = "Your map page.";
-            return View();
-        }
+        
         public ActionResult GasPrices()
         {
             ViewBag.Message = "gas prices.";

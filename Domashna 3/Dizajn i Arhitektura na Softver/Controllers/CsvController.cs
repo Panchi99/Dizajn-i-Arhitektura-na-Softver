@@ -10,7 +10,7 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
     public class CsvController : Controller
     {
         // GET: Csv
-        public ActionResult Index()
+        public ActionResult mapata()
         {
             Csv csv = new Csv();
             csv.csvFile();
