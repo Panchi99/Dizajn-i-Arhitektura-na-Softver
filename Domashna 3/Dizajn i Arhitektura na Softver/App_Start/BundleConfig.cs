@@ -23,7 +23,7 @@ namespace Dizajn_i_Arhitektura_na_Softver
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/bootbox.js",
                       "~/Scripts/DataTables/jquery.datatables.js",
-                      "~/Scripts/DataTables/dataTables.bootstrap.js"
+                      "~/Scripts/DataTables/datatables.bootstrap.js"
                       ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -32,7 +32,8 @@ namespace Dizajn_i_Arhitektura_na_Softver
                       "~/Content/gasPrices.css",
                       "~/Content/ContactCSS.css",
                       "~/Content/AboutUsCSS.css",
-                      "~/Content/DataTables/css/datatables.bootstrap.css"));
+                      "~/Content/DataTables/css/datatables.bootstrap.css"
+                      ));
                 }
     }
 }

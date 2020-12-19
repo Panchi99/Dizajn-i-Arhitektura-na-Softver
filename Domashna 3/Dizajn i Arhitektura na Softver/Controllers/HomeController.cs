@@ -12,8 +12,6 @@ using Dizajn_i_Arhitektura_na_Softver.Models;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
-using System.Net.Http;
-using HtmlAgilityPack;
 
 namespace Dizajn_i_Arhitektura_na_Softver.Controllers
 {
@@ -23,6 +21,13 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult Map()
+        {
+            Csv csv = new Csv();
+            csv.csvFile();
+            return View(csv);
         }
 
         public ActionResult AboutUs()
@@ -41,8 +46,8 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
             {
                 var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
                 var message = new MailMessage();
-                message.To.Add(new MailAddress("petrolheadsbussiness@gmail.com"));   
-                message.From = new MailAddress(model.FromEmail);  
+                message.To.Add(new MailAddress("petrolheadsbussiness@gmail.com"));  // replace with valid value 
+                message.From = new MailAddress(model.FromEmail);  // replace with valid value
                 message.Subject = model.Subject;
 
                 message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message);
@@ -57,8 +62,8 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
                         smtp.UseDefaultCredentials = false;
                         var credential = new NetworkCredential
                         {
-                            UserName = model.FromEmail, 
-                            Password = model.Password 
+                            UserName = model.FromEmail,  // replace with valid value
+                            Password = model.Password  // replace with valid value
                         };
                         smtp.Credentials = credential;
                         smtp.Host = "smtp-mail.outlook.com";
@@ -75,8 +80,8 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
                         smtp.UseDefaultCredentials = false;
                         var credential = new NetworkCredential
                         {
-                            UserName = model.FromEmail, 
-                            Password = model.Password  
+                            UserName = model.FromEmail,  // replace with valid value
+                            Password = model.Password  // replace with valid value
                         };
                         smtp.Credentials = credential;
                         smtp.Host = "smtp.gmail.com";
@@ -95,41 +100,23 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
             return View();
         }
 
+
+
+
+
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
 
             return View(new SendMail());
         }
-        public ActionResult Map() {
-            ViewBag.Mesage = "Your map page.";
+        
+        public ActionResult GasPrices()
+        {
+            ViewBag.Message = "gas prices.";
             return View();
-        }
-       
-
-       public async System.Threading.Tasks.Task<ActionResult> GasPrices()
-       {
-
-                var url = "https://www.erc.org.mk/";
-
-                var httpClient = new HttpClient();
-                var html = await httpClient.GetStringAsync(url);
-
-                var htmlDocument = new HtmlDocument();
-                htmlDocument.LoadHtml(html);
-
-                var divCeni = htmlDocument.DocumentNode.Descendants("div")
-                    .Where(node => node.GetAttributeValue("id", "")
-                    .Equals("CeniLista")).ToList();
-
-                var lista = divCeni[0].Descendants("td")
-                    .ToList();
-
-                Console.WriteLine(lista.ToString());
-            ViewBag.Message = lista;
-            return View();
-        }
-         
         }
         
+    }
 }

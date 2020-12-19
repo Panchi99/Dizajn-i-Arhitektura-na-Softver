@@ -1,6 +1,6 @@
 ﻿.gasPrices {
     margin-top:30px;
-    width: 120%;
+    width: 100%;
     height:auto;
     background-color:lightgreen;
     text-align: center;
@@ -14,7 +14,7 @@
         font-size:30px;
     }
 .gasPricesContainer{
-    width:120%;
+    width:100%;
     margin-top:70px;
     margin-left:auto;
     margin-right:auto;
@@ -92,6 +92,7 @@ body > div.container.body-content > div.gasPricesContainer > div.prices > div:nt
     width:100%;
 }
 body > div.container.body-content > div.gasPricesContainer > div.prices > div:nth-child(5) > img {
-    margin-left: 100px;
-    width: 100%;
+    margin-left: 10px;
+    width:100%
+    
 }

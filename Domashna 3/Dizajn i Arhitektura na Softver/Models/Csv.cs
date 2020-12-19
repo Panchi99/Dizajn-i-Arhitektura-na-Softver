@@ -35,8 +35,7 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
 
 
 
-
-        public Csv() {
+        public Csv() { 
             longitude = new List<String>();
             latitude = new List<String>();
             ID = new List<String>();
@@ -52,7 +51,9 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
         }
         public void csvFile()
         {
-            using (var reader = new StreamReader("C:/Users/panci/OneDrive/Desktop/DIANS/Dizajn-i-Arhitektura-na-Softver/Domashna 3/Dizajn i Arhitektura na Softver/BenziskiPumpi.csv"))
+            string path = HttpContext.Current.Server.MapPath(@"../BenziskiPumpi.csv");
+            using (var reader = new StreamReader(path, true))
+               
             {
                 while (!reader.EndOfStream)
                 {
