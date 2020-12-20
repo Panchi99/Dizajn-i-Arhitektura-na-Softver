@@ -186,15 +186,15 @@
             <td>
                 @using (Html.BeginForm("Map", "Home"))
                 {
-                    //@Model.selectLists.Where(model => model.Selected).Equals(true)
-                    //@ViewBag.Hidden =
-                    @Html.HiddenFor(Model => Model.getID()[i]);
-                    @Html.DropDownListFor(Model => Model.IDSelected, Model.selectLists, "Select Rating", "Value");
-            
-                    <input id='btnSubmit' type="submit" value='submit' />
-            
+                    <div class="form-group">
+                    @Html.HiddenFor(Model => Model.getID()[i])
+                    @Html.DropDownListFor(Model => Model.IDSelected, Model.selectLists, "Select rating", new {@class = "form-control"})
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-primary" id='btnSubmit' type="submit" value='submit' />
+                    </div>
 
-        }
+                }
             </td>
 
         </tr>
