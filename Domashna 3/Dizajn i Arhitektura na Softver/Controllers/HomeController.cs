@@ -24,7 +24,14 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
         {
             Csv csv = new Csv();
             csv.csvFile();
+            ViewBag.list = csv.selectLists;
             return View(csv);
+        }
+        [HttpPost]
+        public ActionResult Map(Csv model)
+        {
+            
+            return View(); 
         }
 
         public ActionResult AboutUs()

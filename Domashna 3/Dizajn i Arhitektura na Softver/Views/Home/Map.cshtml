@@ -142,6 +142,9 @@
             <th>
                 Fuel LPG
             </th>
+            <th>
+                Rate it
+            </th>
           
            
         </tr>
@@ -180,7 +183,20 @@
             <td>
                 @Html.DisplayFor(modelItem => Model.getFuelLPG()[i])
             </td>
-          
+            <td>
+                @using (Html.BeginForm("Map", "Home"))
+                {
+                    //@Model.selectLists.Where(model => model.Selected).Equals(true)
+                    //@ViewBag.Hidden =
+                    @Html.HiddenFor(Model => Model.getID()[i]);
+                    @Html.DropDownListFor(Model => Model.IDSelected, Model.selectLists, "Select Rating", "Value");
+            
+                    <input id='btnSubmit' type="submit" value='submit' />
+            
+
+        }
+            </td>
+
         </tr>
         }
     </tbody>
