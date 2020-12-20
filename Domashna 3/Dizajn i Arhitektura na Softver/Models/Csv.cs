@@ -10,7 +10,7 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
 {
     public class Csv
     {
-        private List<String> longitude  { get; set;}
+        private List<String> longitude { get; set; }
         private List<String> latitude { get; set; }
 
         private List<String> ID { get; set; }
@@ -36,11 +36,11 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
         private List<String> AvgRating { get; set; }
         private List<String> CountRatings { get; set; }
         public List<String> nums1to5 { get; set; }
+        public int IDSelected { get; set; }
 
 
 
-
-        public Csv() { 
+        public Csv() {
             longitude = new List<String>();
             latitude = new List<String>();
             ID = new List<String>();
@@ -56,111 +56,107 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
             AvgRating = new List<String>();
             CountRatings = new List<String>();
 
-            public String IDSelected;
-
-            nums1to5.Add("1");
-            nums1to5.Add("2");
-            nums1to5.Add("3");
-            nums1to5.Add("4");
-            nums1to5.Add("5");
+           
 
         }
-        public void csvFile()
+
+
+    public void csvFile()
+    {
+        string path = HttpContext.Current.Server.MapPath(@"../BenziskiPumpi.csv");
+        using (var reader = new StreamReader(path, true))
+
         {
-            string path = HttpContext.Current.Server.MapPath(@"../BenziskiPumpi.csv");
-            using (var reader = new StreamReader(path, true))
-               
+            while (!reader.EndOfStream)
             {
-                while (!reader.EndOfStream)
-                {
-                    var line = reader.ReadLine();
-                    var values = line.Split(',');
+                var line = reader.ReadLine();
+                var values = line.Split(',');
 
-                    longitude.Add(values[1]);
-                    latitude.Add(values[2]);
-                    ID.Add(values[0]);
-                    Name.Add(values[3]);
-                    fuelDiesel.Add(values[4]);
-                    openingHours.Add(values[8]);
-                    cashPayment.Add(values[9]);
-                    masterCardPayment.Add(values[10]);
-                    visaPayment.Add(values[11]);
-                    fuel95.Add(values[14]);
-                    fuel98.Add(values[15]);
-                    fuelLPG.Add(values[16]);
-                    AvgRating.Add(values[20]);
-                    CountRatings.Add(values[21]);
+                longitude.Add(values[1]);
+                latitude.Add(values[2]);
+                ID.Add(values[0]);
+                Name.Add(values[3]);
+                fuelDiesel.Add(values[4]);
+                openingHours.Add(values[8]);
+                cashPayment.Add(values[9]);
+                masterCardPayment.Add(values[10]);
+                visaPayment.Add(values[11]);
+                fuel95.Add(values[14]);
+                fuel98.Add(values[15]);
+                fuelLPG.Add(values[16]);
+                AvgRating.Add(values[20]);
+                CountRatings.Add(values[21]);
 
 
-                }
             }
         }
-        public List<String> getLongitude() {
-            return longitude;
-        }
+    }
+    public List<String> getLongitude() {
+        return longitude;
+    }
 
-        public List<String> getLatitude()
-        {
-            return latitude;
-        }
+    public List<String> getLatitude()
+    {
+        return latitude;
+    }
 
-        public List<String> getName()
-        {
-            return Name;
-        }
+    public List<String> getName()
+    {
+        return Name;
+    }
 
-        public List<String> getID()
-        {
-            return ID;
-        }
+    public List<String> getID()
+    {
+        return ID;
+    }
 
-        public List<String> getFuelDiesel()
-        {
-            return fuelDiesel;
-        }
+    public List<String> getFuelDiesel()
+    {
+        return fuelDiesel;
+    }
 
-        public List<String> getOpeningHours()
-        {
-            return openingHours;
-        }
+    public List<String> getOpeningHours()
+    {
+        return openingHours;
+    }
 
-        public List<String> getCashPayment()
-        {
-            return cashPayment;
-        }
+    public List<String> getCashPayment()
+    {
+        return cashPayment;
+    }
 
-        public List<String> getMasterCardPayment()
-        {
-            return masterCardPayment;
-        }
+    public List<String> getMasterCardPayment()
+    {
+        return masterCardPayment;
+    }
 
-        public List<String> getVisaPayment()
-        {
-            return visaPayment;
-        }
+    public List<String> getVisaPayment()
+    {
+        return visaPayment;
+    }
 
-        public List<String> getFuel95()
-        {
-            return fuel95;
-        }
+    public List<String> getFuel95()
+    {
+        return fuel95;
+    }
 
-        public List<String> getFuel98()
-        {
-            return fuel98;
-        }
+    public List<String> getFuel98()
+    {
+        return fuel98;
+    }
 
-        public List<String> getFuelLPG()
-        {
-            return fuelLPG;
-        }
-        public List<String> getAvgRating()
-        {
-            return AvgRating;
-        }
-        public List<String> getCountRatings()
-        {
-            return CountRatings;
-        }
+    public List<String> getFuelLPG()
+    {
+        return fuelLPG;
+    }
+    public List<String> getAvgRating()
+    {
+        return AvgRating;
+    }
+    public List<String> getCountRatings()
+    {
+        return CountRatings;
+    }
 
     }
 }

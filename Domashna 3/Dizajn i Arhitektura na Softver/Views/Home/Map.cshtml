@@ -142,9 +142,7 @@
             <th>
                 Fuel LPG
             </th>
-            <th>
-                Average Rating
-            </th>
+          
            
         </tr>
     </thead>
@@ -182,16 +180,7 @@
             <td>
                 @Html.DisplayFor(modelItem => Model.getFuelLPG()[i])
             </td>
-            <td>
-                @using (Html.BeginForm("Home","Map"))
-                    {
-                        @Html.DropDownListFor(@Model.IDSelected, new SelectList(@Model.nums1to5),
-    "Select Rating");
-
-                        @Html.HiddenFor(m => m.getID()[i]);
-                    }
-                    
-            </td>
+          
         </tr>
         }
     </tbody>
