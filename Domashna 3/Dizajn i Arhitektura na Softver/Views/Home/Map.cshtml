@@ -47,11 +47,12 @@
         margin-top: 65px;
         text-align: center;
         font-size: 50px;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
     }
 </style>
 
 <div class="row">
-    <h1>
+    <h1 >
         Map
     </h1>
 </div>
@@ -71,26 +72,27 @@
         //give latitude and long
         var lat =@Html.Raw(Json.Encode(Model.getLatitude()));
         var long = @Html.Raw(Json.Encode(Model.getLongitude()));
+        var names = @Html.Raw(Json.Encode(Model.getName()));
+         var id = @Html.Raw(Json.Encode(Model.getID()));
         for (let i = 1, j=1; i < lat.length; i++, j++) {
                 var myLatlng = new google.maps.LatLng(lat[i], long[j]);
                 var marker = new google.maps.Marker({
                     position: myLatlng,
                     map: map,
-                    title: "Macedonia"
+                    title: names[i] + "\n" + id[i]
+
                 });
         }
-        const input = document.getElementById("pac-input");
+       /* const input = document.getElementById("pac-input");
         const searchBox = new google.maps.places.SearchBox(input);
         mapOptions.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
         mapOptions.addListener("bounds_changed", () => {
             searchBox.setBounds(map.getBounds());
         });
+        */ //GOODLE API DEVELOPERS MODE NE DOZVOLUVA KORISTENJE NA SEARCH BOX BEZ PRETPLATA (API KEY)...
     }
 </script>
-<input id="pac-input"
-       class="controls"
-       type="text"
-       placeholder="Search Box" />
+
 <div id="dvMap"></div>
 
 <div id="mapaNaRM">
@@ -140,43 +142,57 @@
             <th>
                 Fuel LPG
             </th>
+            <th>
+                Average Rating
+            </th>
+           
         </tr>
     </thead>
     <tbody>
         @for (int i = 1; i < Model.getName().Count; i++)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => Model.getName()[i])
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => Model.getID()[i])
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => Model.getOpeningHours()[i])
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => Model.getCashPayment()[i])
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => Model.getMasterCardPayment()[i])
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => Model.getVisaPayment()[i])
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => Model.getFuelDiesel()[i])
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => Model.getFuel95()[i])
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => Model.getFuel98()[i])
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => Model.getFuelLPG()[i])
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getName()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getID()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getOpeningHours()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getCashPayment()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getMasterCardPayment()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getVisaPayment()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getFuelDiesel()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getFuel95()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getFuel98()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getFuelLPG()[i])
+            </td>
+            <td>
+                @using (Html.BeginForm("Home","Map"))
+                    {
+                        @Html.DropDownListFor(@Model.IDSelected, new SelectList(@Model.nums1to5),
+    "Select Rating");
+
+                        @Html.HiddenFor(m => m.getID()[i]);
+                    }
+                    
+            </td>
+        </tr>
         }
     </tbody>
 </table>

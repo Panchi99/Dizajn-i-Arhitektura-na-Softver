@@ -33,6 +33,11 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
 
         private List<String> fuelLPG { get; set; }
 
+        private List<String> AvgRating { get; set; }
+        private List<String> CountRatings { get; set; }
+        public List<String> nums1to5 { get; set; }
+
+
 
 
         public Csv() { 
@@ -48,6 +53,17 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
             fuel98 = new List<String>();
             fuelDiesel = new List<String>();
             fuelLPG = new List<String>();
+            AvgRating = new List<String>();
+            CountRatings = new List<String>();
+
+            public String IDSelected;
+
+            nums1to5.Add("1");
+            nums1to5.Add("2");
+            nums1to5.Add("3");
+            nums1to5.Add("4");
+            nums1to5.Add("5");
+
         }
         public void csvFile()
         {
@@ -72,6 +88,10 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
                     fuel95.Add(values[14]);
                     fuel98.Add(values[15]);
                     fuelLPG.Add(values[16]);
+                    AvgRating.Add(values[20]);
+                    CountRatings.Add(values[21]);
+
+
                 }
             }
         }
@@ -132,6 +152,14 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
         public List<String> getFuelLPG()
         {
             return fuelLPG;
+        }
+        public List<String> getAvgRating()
+        {
+            return AvgRating;
+        }
+        public List<String> getCountRatings()
+        {
+            return CountRatings;
         }
 
     }
