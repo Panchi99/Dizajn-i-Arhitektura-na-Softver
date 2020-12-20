@@ -477,3 +477,4 @@ C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizaj
 C:\Users\panci\OneDrive\Desktop\DIANS\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\bin\HtmlAgilityPack.dll
 C:\Users\panci\OneDrive\Desktop\DIANS\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\bin\HtmlAgilityPack.pdb
 C:\Users\panci\OneDrive\Desktop\DIANS\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\bin\HtmlAgilityPack.xml
+C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\obj\Debug\Dizajn i Arhitektura na Softver.csprojAssemblyReference.cache
