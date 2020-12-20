@@ -4,6 +4,7 @@ using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using Microsoft.Ajax.Utilities;
 
 namespace Dizajn_i_Arhitektura_na_Softver.Models
@@ -35,9 +36,9 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
 
         private List<String> AvgRating { get; set; }
         private List<String> CountRatings { get; set; }
-        public List<String> nums1to5 { get; set; }
         public int IDSelected { get; set; }
-
+        public List<SelectListItem> selectLists { get; set; }
+        public IEnumerable<SelectListItem> list { get; set; }
 
 
         public Csv() {
@@ -55,13 +56,28 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
             fuelLPG = new List<String>();
             AvgRating = new List<String>();
             CountRatings = new List<String>();
+            selectLists= new List<SelectListItem>();
 
-           
+            SelectListItem item1 = new SelectListItem() { Text = "1", Value = "1",  };
+            SelectListItem item2 = new SelectListItem() { Text = "2", Value = "2",  };
+            SelectListItem item3 = new SelectListItem() { Text = "3", Value = "3" };
+            SelectListItem item4 = new SelectListItem() { Text = "4", Value = "4" };
+            SelectListItem item5 = new SelectListItem() { Text = "5", Value = "5" };
+            selectLists.Add(item1);
+            selectLists.Add(item2);
+            selectLists.Add(item3);
+            selectLists.Add(item4);
+            selectLists.Add(item5);
+            list = selectLists;
+
+
+
+
 
         }
 
 
-    public void csvFile()
+        public void csvFile()
     {
         string path = HttpContext.Current.Server.MapPath(@"../BenziskiPumpi.csv");
         using (var reader = new StreamReader(path, true))
@@ -84,8 +100,8 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
                 fuel95.Add(values[14]);
                 fuel98.Add(values[15]);
                 fuelLPG.Add(values[16]);
-                AvgRating.Add(values[20]);
-                CountRatings.Add(values[21]);
+                //AvgRating.Add(values[20]);
+                //CountRatings.Add(values[21]);
 
 
             }
