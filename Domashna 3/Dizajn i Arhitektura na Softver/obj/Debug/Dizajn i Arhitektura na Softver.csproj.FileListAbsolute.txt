@@ -309,7 +309,6 @@ C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizaj
 C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\bin\Newtonsoft.Json.xml
 C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\bin\Antlr3.Runtime.pdb
 C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\obj\Debug\Dizajn i Arhitektura na Softver.csprojAssemblyReference.cache
 C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\obj\Debug\Dizajn i Arhitektura na Softver.csproj.CoreCompileInputs.cache
 C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\obj\Debug\Dizajn i Arhitektura na Softver.csproj.CopyComplete
 C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3\Dizajn i Arhitektura na Softver\obj\Debug\Dizajn i Arhitektura na Softver.dll

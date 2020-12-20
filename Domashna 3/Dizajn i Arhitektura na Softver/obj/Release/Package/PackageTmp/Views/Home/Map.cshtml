@@ -1,0 +1,210 @@
+﻿@model Dizajn_i_Arhitektura_na_Softver.Models.Csv
+@{
+    ViewBag.Title = "Map";
+}
+<style>
+    #dvMap {
+        height: 500px;
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #row1 {
+        font-size: 20px;
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    #mapaNaRM {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    #tekstISlika {
+        margin-top: 5%;
+    }
+
+    #img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        float: left;
+    }
+
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        margin-top: 65px;
+        text-align: center;
+        font-size: 50px;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+    }
+</style>
+
+<div class="row">
+    <h1 >
+        Map
+    </h1>
+</div>
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyCJau8R5ITL010UEDY76YAyhbGRUixpPz8&callback=initAutocomplete&libraries=places&v=weekly"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        var mapOptions = {
+            //give latitude and long
+            center: new google.maps.LatLng("41.6086", "21.7453"),
+            zoom: 8,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var infoWindow = new google.maps.InfoWindow();
+        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+        //give latitude and long
+        var lat =@Html.Raw(Json.Encode(Model.getLatitude()));
+        var long = @Html.Raw(Json.Encode(Model.getLongitude()));
+        var names = @Html.Raw(Json.Encode(Model.getName()));
+         var id = @Html.Raw(Json.Encode(Model.getID()));
+        for (let i = 1, j=1; i < lat.length; i++, j++) {
+                var myLatlng = new google.maps.LatLng(lat[i], long[j]);
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: names[i] + "\n" + id[i]
+
+                });
+        }
+       /* const input = document.getElementById("pac-input");
+        const searchBox = new google.maps.places.SearchBox(input);
+        mapOptions.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        mapOptions.addListener("bounds_changed", () => {
+            searchBox.setBounds(map.getBounds());
+        });
+        */ //GOODLE API DEVELOPERS MODE NE DOZVOLUVA KORISTENJE NA SEARCH BOX BEZ PRETPLATA (API KEY)...
+    }
+</script>
+
+<div id="dvMap"></div>
+
+<div id="mapaNaRM">
+    <p>Мапа на бензиски пумпи</p>
+</div>
+
+<div class="image" id="tekstISlika">
+    <img width="700" height="500" id="img" src="https://spektartermo.com.mk/wp-content/uploads/2019/01/Front-mp-gev3.jpg" />
+    <p id="row1">The Republic of North Macedonia has over 250 gas stations. The most famous brands are: Makpetrol, Okta, Lukoil etc.</p>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
+<table id="table" class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                ID
+            </th>
+            <th>
+                Opening Hours
+            </th>
+            <th>
+                Cash Payment
+            </th>
+            <th>
+                Master Card Payment
+            </th>
+            <th>
+                Visa Payment
+            </th>
+            <th>
+                Fuel Diesel
+            </th>
+            <th>
+                Fuel 95
+            </th>
+            <th>
+                Fuel 98
+            </th>
+            <th>
+                Fuel LPG
+            </th>
+            <th>
+                Rate it
+            </th>
+          
+           
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 1; i < Model.getName().Count; i++)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getName()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getID()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getOpeningHours()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getCashPayment()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getMasterCardPayment()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getVisaPayment()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getFuelDiesel()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getFuel95()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getFuel98()[i])
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.getFuelLPG()[i])
+            </td>
+            <td>
+                @using (Html.BeginForm("Map", "Home"))
+                {
+                    <div class="form-group">
+                    @Html.HiddenFor(Model => Model.getID()[i])
+                    @Html.DropDownListFor(Model => Model.IDSelected, Model.selectLists, "Select rating", new {@class = "form-control"})
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-primary" id='btnSubmit' type="submit" value='submit' />
+                    </div>
+
+                }
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts{
+
+    <script>
+
+        $("#table").DataTable();
+
+    </script>
+
+}
+
+

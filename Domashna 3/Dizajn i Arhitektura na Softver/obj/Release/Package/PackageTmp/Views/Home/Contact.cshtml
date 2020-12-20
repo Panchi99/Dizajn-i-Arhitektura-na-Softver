@@ -1,0 +1,67 @@
+﻿@model Dizajn_i_Arhitektura_na_Softver.Models.SendMail
+<div id="content">
+    <div class="row fill">
+        <img id="#myImage" src="~/contactuss.jpg" />
+    </div>
+    </div>
+    <div class="row" id="bodyForm">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div><h1 id="text-naslov">Feel free to contact our developers for any suggestion or complaint</h1></div>
+            <br />
+            <div><h3 id="text-naslov">Critics are welcomed!</h3></div>
+            <hr />
+            <div id="divBox" class="form-row form-group">
+
+                @Html.TextBoxFor(m => m.FromName, new { placeholder = "Your name here", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.FromName)
+
+            </div>
+            <div class="form-row">
+                <div class="col-sm-6 form-group">
+
+                    @Html.TextBoxFor(m => m.FromEmail, new { placeholder = "Email", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.FromEmail)
+
+                </div>
+                <div class="col-sm-6 form-group">
+
+                    @Html.PasswordFor(m => m.Password, new { placeholder = "Password", @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Password)
+
+                </div>
+            </div>
+            <div class="form-row form-group">
+
+                @Html.TextBoxFor(m => m.Subject, new { placeholder = "Subject", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Subject)
+
+            </div>
+            <div class="form-row form-group">
+
+                @Html.TextAreaFor(m => m.Message, new { placeholder = "Message", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Message)
+
+            </div>
+            <div class="form-group">
+
+                <input type="submit" id="button" class="btn btn-success" value="Send" />
+
+            </div>
+        }
+    </div>
+<footer id="note">
+    <strong><b>NOTE!</b></strong> To successfully send email you need to enable less secure apps option from your gmail account!
+    <br /> 
+    <a href="https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4NsbmWFdI0RZmCjz7EjOCivXEMVAqx3P9JONGnFnc2c5q5_i44M0SMWJw3byClbxpuOdf1ovDykkiIWNSamWdfSSsvscQ">
+    Click here to turn it on</a>
+    You can easily revert those changes once you're finished sending mails..
+</footer>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+

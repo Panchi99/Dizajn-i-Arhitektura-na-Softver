@@ -1,0 +1,49 @@
+﻿<div class="banner">
+    <div class="row ro">
+        <img id="slika" src="~/About-Us-banner.png" alt="img broken" />
+    </div>
+</div>  
+<div class="grid-containter">
+    
+    <div class="title grid-item" style="">
+        <h1 id="h1">Who we are</h1>
+        <p>
+            We are a devoted group of 4 students studing at the University of computer science and engeneering also known as FINKI.
+            Our main goal is to simplify peoples access to information on the internet by joining resources
+            from multiple points and providing them in a user-friendly web application
+        </p>
+        <p>As a team we are always open for expanding our knowledge and building new experiences.</p>
+    </div>
+    
+</div>
+<div class="kopche" style="text-align: center; margin-top: 30px;">
+  
+    <button type="button"  class="btn btn-primary" id="button" style="text-align: center;" onclick="">TEAMMATES</button>
+</div>
+
+<div id="popup">
+    <div class="row redovi">
+        <div class="col-md-offset-1 col-md-2">
+           <img class="teammates" src="~/teammates/img1.jpg" />
+        </div>
+        <div class="col-md-offset-1 col-md-2">
+            <img class="teammates" src="~/teammates/img2.jpg" />
+        </div>
+        <div class="col-md-offset-1 col-md-2">
+            <img class="teammates" src="~/teammates/img3.jpg" />
+        </div>
+        <div class="col-md-offset-1 col-md-2">
+            <img class="teammates" src="~/teammates/img4.jpg" />
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script>
+        $("#button").click(function () {
+            $("#popup").css("display","block");
+        });
+   </script>
+    }
+   

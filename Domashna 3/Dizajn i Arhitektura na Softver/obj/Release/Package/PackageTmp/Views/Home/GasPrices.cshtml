@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewBag.Title = "GasPrices";
+    var lista = ViewBag.Message;
+}
+
+
+
+<div class="gasPrices">
+    <h1>
+        LATEST PRICES BASED ON ENERGY AND WATER SERVICES REGULATORY COMMISSION OF THE REPUBLIC OF NORTH MACEDONIA
+    </h1>
+</div>
+<div class="gasPricesContainer">
+
+    <div class="FAQ">
+        <div class="gasParagraph">
+            <h1>
+                How are global Fuel Prices Calculated?
+            </h1>
+        </div>
+        <div class="gasParagraph">
+            <p>
+                The law of supply and demand regulates gasoline prices, as it does nearly all commodities.
+                Both supply and demand are changing all the time, as new oil wells are discovered and as economic conditions impact consumer demand.
+                As a longer-term general trend, the supply of high-quality oil is fixed and dwindling while global demand is increasing with a rising population and economic growth.
+            </p>
+            <img src="https://ourworldindata.org/grapher/exports/natural-gas-prices.png?v=4" />
+        </div>
+        <hr style="height:2px;border-width:0;color:gray;background-color:forestgreen">
+
+        <div class="gasParagraph">
+            <h1>How are international conflicts affecting the price of black gold?</h1>
+        </div>
+        <div class="gasParagraph">
+            <p>
+                Islamic militants are taking over Iraq, and given how fast they are advancing, there is a good chance they will take Baghdad as well.
+
+                This turn of events raises fears among the world public that very soon there will be a strong blow to the oil market.
+                There is a general conclusion on the oil market that the conflicts in the Middle East mean a higher price of oil.
+                If Baghdad does not "collapse" under the fire of ISIS, everything will be fine, but despite that, the fear of the situation has an impact on the price of oil.
+            </p>
+            <img src="https://st3.depositphotos.com/6930442/36345/v/600/depositphotos_363451378-stock-video-silhouette-of-an-oil-pumping.jpg" />
+
+        </div>
+
+    </div>
+    <div class="prices">
+        <div class="fuelPrices">
+            <div id="CeniLista" style="height:100%; color:#3B5C8C; font-family:Verdana; font-size:18px; font-weight:bold; overflow-y:scroll; width:100%">
+
+                <table width='100%' border='0' cellspacing='0' cellpadding='0' style=' font-family:Verdana; font-size:12px; font-weight:normal; color:#000; background-color:#FFF;  '>
+                    <tr>
+
+
+                        <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; '>  ЕУРОСУПЕР<br />БС - 95</td>
+                        <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[1].InnerText;</td>
+                    </tr>
+
+                    <tr>
+                        <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ЕУРОСУПЕР<br />БС - 98 </td>
+                        <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[3].InnerText;</td>
+                    </tr>
+
+                    <tr>
+                        <td style='width:50%;  text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ЕУРОДИЗЕЛ БС (Д-Е V)</td>
+                        <td style='width:50%;  text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[5].InnerText;</td>
+                    </tr>
+
+                    <tr>
+                        <td style='width:50%;  text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ЕКСТРА ЛЕСНО <br /> 1(ЕЛ-1)</td>
+                        <td style='width:50%;  text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[7].InnerText;</td>
+                    </tr>
+
+                    <tr>
+                        <td style='width:50%;  text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> МАЗУТ М-1 HC</td>
+                        <td style='width:50%;  text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[9].InnerText;</td>
+                    </tr>
+                    <tr>
+                        <td style='width:50%;  text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> Домаќинства ЕДНОТАРИФНО мерење</td>
+                        <td style='width:50%;  text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[11].InnerText;</td>
+                    </tr>
+
+                    <tr>
+                        <td style='width:50%;text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> Домаќинства ДВОТАРИФНО мерење (висока тарифа)</td>
+                        <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[13].InnerText;</td>
+                    </tr>
+
+                    <tr>
+                        <td style='width:50%;  text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> Домаќинства ДВОТАРИФНО мерење (ниска тарифа)</td>
+                        <td style='width:50%;  text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[15].InnerText;</td>
+                    </tr>
+
+                    <tr>
+                        <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ВЕТЕРНИ ЕЛЕКТРОЦЕНТРАЛИ ≤ 50 MW</td>
+                        <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[17].InnerText;</td>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+        <div class="fillUp">
+            <input class="btn btn-success"type="button" value="FILL UP PLACES" onclick="location.href='@Url.Action("Map","Home")'" />
+        </div>
+        <hr style="height:2px;border-width:0;color:gray;background-color:forestgreen">
+        <div class="gasParagraph">
+            <h1>Alternative Fuels</h1>
+        </div>
+        <div class="gasParagraph">
+            <p>
+                The main alternatives to oil and gas energy include nuclear power, solar power, ethanol, and wind power. Fossil fuels still dwarf these alternatives in global and domestic energy markets, but there is considerable public momentum to increase their utilization as industries shift towards sustainability and more green business practices.
+
+
+                Fossil fuels-comprised primarily of energy sources from coal, oil, propane, and natural gas-account for more than 80% of total energy consumption in the United States.
+                Alternative forms of energy have, to this point, proven to be uneconomic substitutes; they are less efficient and more expensive (or, in the case of nuclear power, completely restricted from expanding) than fossil fuels.
+                As a result, the government currently provides a lot of subsidies for consumers who choose cleaner forms of renewable energy either for their house or for their vehicles.
+                The many oil alternatives are ballooning as more research and development occurs in this space, and as supply and demand laws of economics eventually push down prices to be competitive with traditional fossil fuels.
+            </p>
+            <img src="https://www.fuelfreedom.org/wp-content/uploads/icons.jpg" />
+        </div>
+
+    </div>
+</div>
++
+
+
