@@ -100,8 +100,8 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
                 fuel95.Add(values[14]);
                 fuel98.Add(values[15]);
                 fuelLPG.Add(values[16]);
-                //AvgRating.Add(values[20]);
-                //CountRatings.Add(values[21]);
+                //AvgRating.Add(values[21]);
+                //CountRatings.Add(values[22]);
 
 
             }
@@ -173,6 +173,7 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
     {
         return CountRatings;
     }
+
 
     }
 }
