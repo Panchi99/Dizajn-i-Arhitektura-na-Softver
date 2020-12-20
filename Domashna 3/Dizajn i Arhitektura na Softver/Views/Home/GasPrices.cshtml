@@ -48,37 +48,60 @@
     </div>
     <div class="prices">
         <div class="fuelPrices">
-            <div>
-                <h1>
-                    Biodiesel
-                </h1>
-                <div class="circle">$12</div>
+            <div id="CeniLista" style="height:100%; color:#3B5C8C; font-family:Verdana; font-size:18px; font-weight:bold; overflow-y:scroll; width:100%">
 
-            </div>
-            <div>
-                <h1>
-                    Ethanol
-                </h1>
-                <div class="circle">$34</div>
+                <table width='100%' border='0' cellspacing='0' cellpadding='0' style=' font-family:Verdana; font-size:12px; font-weight:normal; color:#000; background-color:#FFF;  '>
+                    <tr>
 
-            </div>
-            <div>
-                <h1>
-                    CNG
-                </h1>
-                <div class="circle">$56</div>
 
-            </div>
-            <div>
-                <h1>
-                    Methanol
-                </h1>
-                <div class="circle">$78</div>
+                        <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; '>  ЕУРОСУПЕР<br />БС - 95</td>
+                        <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[1].InnerText;</td>
+                    </tr>
 
+                    <tr>
+                        <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ЕУРОСУПЕР<br />БС - 98 </td>
+                        <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[3].InnerText;</td>
+                    </tr>
+
+                    <tr>
+                        <td style='width:50%;  text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ЕУРОДИЗЕЛ БС (Д-Е V)</td>
+                        <td style='width:50%;  text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[5].InnerText;</td>
+                    </tr>
+
+                    <tr>
+                        <td style='width:50%;  text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ЕКСТРА ЛЕСНО <br /> 1(ЕЛ-1)</td>
+                        <td style='width:50%;  text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[7].InnerText;</td>
+                    </tr>
+
+                    <tr>
+                        <td style='width:50%;  text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> МАЗУТ М-1 HC</td>
+                        <td style='width:50%;  text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[9].InnerText;</td>
+                    </tr>
+                    <tr>
+                        <td style='width:50%;  text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> Домаќинства ЕДНОТАРИФНО мерење</td>
+                        <td style='width:50%;  text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[11].InnerText;</td>
+                    </tr>
+
+                    <tr>
+                        <td style='width:50%;text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> Домаќинства ДВОТАРИФНО мерење (висока тарифа)</td>
+                        <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[13].InnerText;</td>
+                    </tr>
+
+                    <tr>
+                        <td style='width:50%;  text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> Домаќинства ДВОТАРИФНО мерење (ниска тарифа)</td>
+                        <td style='width:50%;  text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[15].InnerText;</td>
+                    </tr>
+
+                    <tr>
+                        <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ВЕТЕРНИ ЕЛЕКТРОЦЕНТРАЛИ ≤ 50 MW</td>
+                        <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[17].InnerText;</td>
+                    </tr>
+                </table>
             </div>
+            
         </div>
         <div class="fillUp">
-            <input type="button" value="FILL UP PLACES" onclick="location.href='@Url.Action("Map","Home")'" />
+            <input class="btn btn-success"type="button" value="FILL UP PLACES" onclick="location.href='@Url.Action("Map","Home")'" />
         </div>
         <hr style="height:2px;border-width:0;color:gray;background-color:forestgreen">
         <div class="gasParagraph">
@@ -101,53 +124,4 @@
 </div>
 +
 
-<div id="CeniLista" style="height:390px; color:#3B5C8C; font-family:Verdana; font-size:18px; font-weight:bold; overflow-y:scroll; width: 241px;">
 
-    <table width='100%' border='0' cellspacing='0' cellpadding='0' style=' font-family:Verdana; font-size:12px; font-weight:normal; color:#000; background-color:#FFF;  '>
-        <tr>
-
-
-            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '>  ЕУРОСУПЕР<br />БС - 95</td>
-            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[1].InnerText;</td>
-        </tr>
-
-        <tr>
-            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ЕУРОСУПЕР<br />БС - 98 </td>
-            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[3].InnerText;</td>
-        </tr>
-
-        <tr>
-            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ЕУРОДИЗЕЛ БС (Д-Е V)</td>
-            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[5].InnerText;</td>
-        </tr>
-
-        <tr>
-            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ЕКСТРА ЛЕСНО <br /> 1(ЕЛ-1)</td>
-            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[7].InnerText;</td>
-        </tr>
-
-        <tr>
-            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> МАЗУТ М-1 HC</td>
-            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[9].InnerText;</td>
-        </tr>
-        <tr>
-            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> Домаќинства ЕДНОТАРИФНО мерење</td>
-            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[11].InnerText;</td>
-        </tr>
-
-        <tr>
-            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> Домаќинства ДВОТАРИФНО мерење (висока тарифа)</td>
-            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[13].InnerText;</td>
-        </tr>
-
-        <tr>
-            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> Домаќинства ДВОТАРИФНО мерење (ниска тарифа)</td>
-            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[15].InnerText;</td>
-        </tr>
-
-        <tr>
-            <td style='width:50%; text-align:right; height:35px; padding-right:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5;  '> ВЕТЕРНИ ЕЛЕКТРОЦЕНТРАЛИ ≤ 50 MW</td>
-            <td style='width:50%; text-align:left; height:35px; font-weight:bold; padding-left:5px; vertical-align:middle; border-bottom:solid 2px #BFD2E5; color:#f1592A;'>@lista[17].InnerText;</td>
-        </tr>
-    </table>
-</div>
