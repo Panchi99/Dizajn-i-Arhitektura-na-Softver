@@ -2,6 +2,8 @@
 @{
     ViewBag.Title = "Map";
 }
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyCJau8R5ITL010UEDY76YAyhbGRUixpPz8&callback=initAutocomplete&libraries=places&v=weekly"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <style>
     #dvMap {
         height: 500px;
@@ -47,13 +49,12 @@
 </style>
 
 <div class="row">
-    <h1 >
+    <h1>
         Map
     </h1>
 </div>
 
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyCJau8R5ITL010UEDY76YAyhbGRUixpPz8&callback=initAutocomplete&libraries=places&v=weekly"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
 <script type="text/javascript">
     window.onload = function () {
         var mapOptions = {
@@ -100,9 +101,7 @@
 </div>
 
 
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
 
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
 
 <table id="table" class="table">
     <thead>
@@ -140,62 +139,63 @@
             <th>
                 Rate it
             </th>
-          
-           
+
+
         </tr>
     </thead>
     <tbody>
         @for (int i = 1; i < Model.getName().Count; i++)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getName()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getID()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getOpeningHours()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getCashPayment()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getMasterCardPayment()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getVisaPayment()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getFuelDiesel()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getFuel95()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getFuel98()[i])
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => Model.getFuelLPG()[i])
-            </td>
-            <td>
-                @using (Html.BeginForm("Map", "Home"))
-                {
-                    <div class="form-group">
-                    @Html.HiddenFor(Model => Model.getID()[i])
-                    @Html.DropDownListFor(Model => Model.IDSelected, Model.selectLists, "Select rating", new {@class = "form-control"})
-                    </div>
-                    <div class="form-group">
-                        <input class="btn btn-primary" id='btnSubmit' type="submit" value='submit' />
-                    </div>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getName()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getID()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getOpeningHours()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getCashPayment()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getMasterCardPayment()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getVisaPayment()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getFuelDiesel()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getFuel95()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getFuel98()[i])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.getFuelLPG()[i])
+                </td>
+                <td>
+                    @using (Html.BeginForm("Map", "Home"))
+                    {
+                        <div class="form-group">
+                            @Html.HiddenFor(Model => Model.getID()[i])
+                            @Html.DropDownListFor(Model => Model.IDSelected, Model.selectLists, "Select rating", new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <input class="btn btn-primary" id='btnSubmit' type="submit" value='submit' />
+                        </div>
 
-                }
-            </td>
+                    }
+                </td>
 
-        </tr>
+            </tr>
         }
     </tbody>
 </table>
+
 
 @section Scripts{
 
@@ -206,5 +206,3 @@
     </script>
 
 }
-
-

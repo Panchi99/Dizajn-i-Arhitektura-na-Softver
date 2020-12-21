@@ -1589,15 +1589,6 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-    .container .grid_3 {
-        width: 30%
-    }
-
-    .container [class*="grid_"] {
-        float: left;
-        min-height: 1px;
-        margin-left: 30px;
-    }
 
 @media (min-width: 768px) {
   .container {

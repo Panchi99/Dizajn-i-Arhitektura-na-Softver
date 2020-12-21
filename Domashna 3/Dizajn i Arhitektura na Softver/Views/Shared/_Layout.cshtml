@@ -3,18 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <title>@ViewBag.Title - Petrol Heads</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-</head>
-
-
     <style>
 
         .navbar-default .navbar-brand {
             color: white;
         }
+
         #RedMenu {
             background-color: gray;
             border-color: gray;
@@ -28,7 +26,9 @@
                 background-color: darkgray;
             }
     </style>
-    </head>
+
+</head>
+   
     <body>
 
         <nav class="navbar navbar-default navbar-fixed-top" id="RedMenu">
@@ -48,7 +48,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>@Html.ActionLink("Home", "Index", "Home", new { @class = "navbar-brand" })</li>
                         <li>@Html.ActionLink("Gas Prices", "GasPrices", "Home", new { @class = "navbar-brand" })</li>
-                        <li>@Html.ActionLink("Map", "Map", "Home", new { @class = "navbar-brand"})</li>
+                        <li>@Html.ActionLink("Map", "Map", "Home", new { @class = "navbar-brand" })</li>
                         <li>@Html.ActionLink("About Us", "AboutUs", "Home", new { @class = "navbar-brand" })</li>
                         <li>@Html.ActionLink("Contact", "Contact", "Home", new { @class = "navbar-brand" })</li>
 
@@ -58,8 +58,8 @@
             </div>
         </nav>
 
-        <script src="js/jquery-2.1.4.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <div class="container body-content">
             @RenderBody()
 
