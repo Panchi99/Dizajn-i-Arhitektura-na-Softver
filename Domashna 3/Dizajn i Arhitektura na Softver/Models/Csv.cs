@@ -40,8 +40,8 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
         public List<SelectListItem> selectLists { get; set; }
         public IEnumerable<SelectListItem> list { get; set; }
 
-
-        public Csv() {
+        public void initialize()
+        {
             longitude = new List<String>();
             latitude = new List<String>();
             ID = new List<String>();
@@ -56,10 +56,13 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
             fuelLPG = new List<String>();
             AvgRating = new List<String>();
             CountRatings = new List<String>();
-            selectLists= new List<SelectListItem>();
+            selectLists = new List<SelectListItem>();
+        }
 
-            SelectListItem item1 = new SelectListItem() { Text = "1", Value = "1",  };
-            SelectListItem item2 = new SelectListItem() { Text = "2", Value = "2",  };
+        public void fillSelectList()
+        {
+            SelectListItem item1 = new SelectListItem() { Text = "1", Value = "1", };
+            SelectListItem item2 = new SelectListItem() { Text = "2", Value = "2", };
             SelectListItem item3 = new SelectListItem() { Text = "3", Value = "3" };
             SelectListItem item4 = new SelectListItem() { Text = "4", Value = "4" };
             SelectListItem item5 = new SelectListItem() { Text = "5", Value = "5" };
@@ -69,14 +72,12 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
             selectLists.Add(item4);
             selectLists.Add(item5);
             list = selectLists;
-
-
-
-
-
         }
+        public Csv() {
 
-
+            initialize();
+            fillSelectList();
+        }
         public void csvFile()
     {
         string path = HttpContext.Current.Server.MapPath(@"../BenziskiPumpi.csv");
@@ -88,25 +89,26 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
                 var line = reader.ReadLine();
                 var values = line.Split(',');
 
-                longitude.Add(values[1]);
-                latitude.Add(values[2]);
-                ID.Add(values[0]);
-                Name.Add(values[3]);
-                fuelDiesel.Add(values[4]);
-                openingHours.Add(values[8]);
-                cashPayment.Add(values[9]);
-                masterCardPayment.Add(values[10]);
-                visaPayment.Add(values[11]);
-                fuel95.Add(values[14]);
-                fuel98.Add(values[15]);
-                fuelLPG.Add(values[16]);
-                //AvgRating.Add(values[21]);
-                //CountRatings.Add(values[22]);
-
-
+                    addValuesToLists(values);
             }
         }
     }
+
+        public void addValuesToLists(string[] values)
+        {
+            longitude.Add(values[1]);
+            latitude.Add(values[2]);
+            ID.Add(values[0]);
+            Name.Add(values[3]);
+            fuelDiesel.Add(values[4]);
+            openingHours.Add(values[8]);
+            cashPayment.Add(values[9]);
+            masterCardPayment.Add(values[10]);
+            visaPayment.Add(values[11]);
+            fuel95.Add(values[14]);
+            fuel98.Add(values[15]);
+            fuelLPG.Add(values[16]);
+        }
     public List<String> getLongitude() {
         return longitude;
     }

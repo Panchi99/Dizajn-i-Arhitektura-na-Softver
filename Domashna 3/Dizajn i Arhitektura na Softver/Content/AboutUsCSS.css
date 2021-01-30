@@ -35,7 +35,7 @@
     grid-template-columns: auto auto auto;
 }
 .grid-item {
-    width: 1052px;
+    width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
 }
@@ -45,12 +45,8 @@
     grid-auto-rows: minmax(100px, auto);
 }
 
-.redovi {
-    margin-top: 40px;
-    margin-left: -140px;
-}
 .teammates {
-    width: 195px;
+    width: 100%/4%;
     height:150px;
 }
 #popup {
