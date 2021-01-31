@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GasStation Microservice", "GasStation Microservice\GasStation Microservice.csproj", "{650D81BC-54AD-4DB1-93AE-F50AEE1C0997}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{650D81BC-54AD-4DB1-93AE-F50AEE1C0997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650D81BC-54AD-4DB1-93AE-F50AEE1C0997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{650D81BC-54AD-4DB1-93AE-F50AEE1C0997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650D81BC-54AD-4DB1-93AE-F50AEE1C0997}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1583393A-AF60-4EF3-ACA3-E29DD2B319FB}
+	EndGlobalSection
+EndGlobal
