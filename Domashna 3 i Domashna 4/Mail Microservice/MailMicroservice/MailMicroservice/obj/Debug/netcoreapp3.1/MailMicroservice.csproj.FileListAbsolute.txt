@@ -1,0 +1,9 @@
+C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3 i Domashna 4\Mail Microservice\MailMicroservice\MailMicroservice\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3 i Domashna 4\Mail Microservice\MailMicroservice\MailMicroservice\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3 i Domashna 4\Mail Microservice\MailMicroservice\MailMicroservice\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3 i Domashna 4\Mail Microservice\MailMicroservice\MailMicroservice\obj\Debug\netcoreapp3.1\MailMicroservice.csprojAssemblyReference.cache
+C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3 i Domashna 4\Mail Microservice\MailMicroservice\MailMicroservice\obj\Debug\netcoreapp3.1\MailMicroservice.AssemblyInfoInputs.cache
+C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3 i Domashna 4\Mail Microservice\MailMicroservice\MailMicroservice\obj\Debug\netcoreapp3.1\MailMicroservice.AssemblyInfo.cs
+C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3 i Domashna 4\Mail Microservice\MailMicroservice\MailMicroservice\obj\Debug\netcoreapp3.1\MailMicroservice.RazorTargetAssemblyInfo.cache
+C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3 i Domashna 4\Mail Microservice\MailMicroservice\MailMicroservice\obj\Debug\netcoreapp3.1\staticwebassets\MailMicroservice.StaticWebAssets.Manifest.cache
+C:\Users\38978\Documents\GitHub\Dizajn-i-Arhitektura-na-Softver\Domashna 3 i Domashna 4\Mail Microservice\MailMicroservice\MailMicroservice\obj\Debug\netcoreapp3.1\staticwebassets\MailMicroservice.StaticWebAssets.xml

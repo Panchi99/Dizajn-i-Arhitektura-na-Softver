@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "YykY+/XI40lBKZIH1Joya6C0x3LZ3KRDEkxjG5TXnhil2UJS3PoNhIryfQk9Ps+02PeuKMdOZB2ufPnHLEAsag==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\38978\\Documents\\GitHub\\Dizajn-i-Arhitektura-na-Softver\\Domashna 3 i Domashna 4\\GasStation Microservice\\GasStationMicroservice\\GasStationMicroservice\\GasStationMicroservice.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\38978\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512"
+  ],
+  "logs": []
+}
