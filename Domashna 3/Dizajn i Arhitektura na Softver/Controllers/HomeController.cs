@@ -15,6 +15,7 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
 
     public class HomeController : Controller
     {
+        // View ActionResults
         public ActionResult Index()
         {
             return View();
@@ -38,7 +39,7 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
 
             return View();
         }
-
+        //ContactUs message creation
         public MailMessage createMessage(SendMail model)
         {
             var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
@@ -51,7 +52,7 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
 
             return message;
         }
-
+        //SMPT Async mail sending
         public async Task<ActionResult> sendFromMicrosoftAsync(SendMail model, MailMessage message)
         {
             using (var smtp = new SmtpClient())
@@ -90,7 +91,7 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
                 return RedirectToAction("Sent");
             }
         }
-
+        //Creating then sending the message ContactUs
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Contact(SendMail model)
@@ -125,7 +126,7 @@ namespace Dizajn_i_Arhitektura_na_Softver.Controllers
         }
 
        
-
+        //Get Real-time Gas Prices from erc.org.mk
        public async System.Threading.Tasks.Task<ActionResult> GasPrices()
         {
 

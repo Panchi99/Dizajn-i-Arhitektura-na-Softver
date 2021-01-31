@@ -80,6 +80,7 @@ namespace Dizajn_i_Arhitektura_na_Softver.Models
         }
         public void csvFile()
     {
+        //Point the Server Map Path to BenziskiPumpi.csv
         string path = HttpContext.Current.Server.MapPath(@"../BenziskiPumpi.csv");
         using (var reader = new StreamReader(path, true))
 
