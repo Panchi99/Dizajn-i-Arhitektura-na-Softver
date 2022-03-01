@@ -1,4 +1,4 @@
-# Dizajn-i-Arhitektura-na-Softver
+# GAS STATION APPLICATION Dizajn-i-Arhitektura-na-Softver
 Project Participants: David Jandrijeski 181188 Petar Kiselinov 181142 Andrej Kolevski 181195  Panci Krango 181046
 
 * Developed an ASP.NET web application. 
